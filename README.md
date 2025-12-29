@@ -3,9 +3,6 @@
 A responsive and interactive Memory Matching Game built using HTML, CSS, JavaScript, and Bootstrap.  
 This project demonstrates core DSA concepts, clean frontend logic, and responsive UI design.
 
-🔗 Live Demo:  
-https://memory-game-n6zl.onrender.com
-
 ---
 
 ## 🚀 Features
