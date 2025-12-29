@@ -1,23 +1,71 @@
-# Memory Matching Game (Web)
+# 🧠 Memory Matching Game
 
-A **web-based memory matching game** built using **HTML, Bootstrap, and JavaScript**. The goal is to find all matching pairs in a 4x4 grid.
+A responsive and interactive Memory Matching Game built using HTML, CSS, JavaScript, and Bootstrap.  
+This project demonstrates core DSA concepts, clean frontend logic, and responsive UI design.
 
-## Features
-- Responsive 4x4 grid using Bootstrap
-- Cards flip on click
-- Tracks number of moves
-- Shuffles cards using Fisher-Yates algorithm (simple DSA)
-- Restart button to reset the game
-- Works on desktop and mobile
+🔗 Live Demo:  
+https://memory-game-n6zl.onrender.com
 
-## How to Play
-1. Open `index.html` in your browser.
-2. Click on two cards to reveal them.
-3. Find all matching pairs in the fewest moves.
-4. Press **Restart Game** to play again.
+---
 
-## How to Deploy on GitHub
-1. Push this folder to your GitHub repository.
-2. Go to **Settings → Pages** in your repo.
-3. Select the `main` branch and root folder `/`.
-4. GitHub will provide a **live demo link**.
+## 🚀 Features
+
+- 🎯 Multiple difficulty levels:
+  - Easy (4×4 grid – 8 pairs)
+  - Medium (5×4 grid – 10 pairs)
+  - Hard (6×4 grid – 12 pairs)
+
+- 🌍 Game modes:
+  - Emoji mode 😄
+  - Number mode 🔢
+
+- 🧠 Core game logic:
+  - Fisher-Yates shuffle algorithm
+  - Card flip and match validation
+  - Move counter
+  - Real-time timer
+
+- 📱 Responsive design:
+  - Works on mobile, tablet, and desktop
+  - Touch-friendly UI
+  - Smooth card flip animations
+
+- 🔁 Game controls:
+  - Restart game anytime
+  - Dynamic board generation based on user selection
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Bootstrap 5
+- Render (Deployment)
+
+---
+
+## 📂 Project Structure
+Memory-Game/
+│
+├── index.html # Main HTML file
+├── style.css # Styling and responsiveness
+├── script.js # Game logic
+└── README.md # Project documentation
+
+## ⚙️ How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yogitaa013/Memory-Game.git
+2. Open the project folder.
+
+3. Open index.html in any modern web browser.
+No additional setup required.
+
+📌 Deployment
+This project is deployed as a static website using Render.
+
+Live Demo:
+https://memory-game-n6zl.onrender.com

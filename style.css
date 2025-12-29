@@ -1,57 +1,96 @@
-/* Game board */
+/* ====== Global ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+/* ====== Game Board ====== */
 #game-board {
-    grid-template-columns: repeat(4, 80px); /* 4 cards per row, fixed size */
-    justify-content: center;
+    max-width: 420px;
     margin: 0 auto;
 }
 
-/* Card styling */
+/* ====== Card ====== */
 .card {
-    width: 80px;
-    height: 80px;
+    aspect-ratio: 1 / 1;
     perspective: 1000px;
     cursor: pointer;
 }
 
 .card-inner {
-    position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    position: relative;
+    transition: transform 0.5s ease;
     transform-style: preserve-3d;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .card.flipped .card-inner {
     transform: rotateY(180deg);
 }
 
-/* Front and back faces */
-.card-front, .card-back {
+/* ====== Card Faces ====== */
+.card-front,
+.card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    backface-visibility: hidden;
+    user-select: none;
 }
 
+/* Front */
 .card-front {
-    background-color: #0d6efd;
-    color: white;
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
 }
 
+/* Back */
 .card-back {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     border: 2px solid #0d6efd;
     transform: rotateY(180deg);
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
-/* Hover effect */
-.card:hover .card-front {
-    background-color: #0b5ed7;
-    transition: background-color 0.3s;
+/* Hover effect (desktop only) */
+@media (hover: hover) {
+    .card:hover .card-front {
+        background: linear-gradient(135deg, #0b5ed7, #084298);
+    }
+}
+
+/* ====== Stats Text ====== */
+#moves-count,
+#timer {
+    font-weight: 500;
+}
+
+/* ====== Buttons & Select ====== */
+button,
+select {
+    font-weight: 500;
+}
+
+/* ====== Mobile Optimization ====== */
+@media (max-width: 600px) {
+    #game-board {
+        max-width: 300px;
+    }
+
+    .card-back {
+        font-size: 1.4rem;
+    }
+
+    select {
+        width: 90% !important;
+    }
 }
